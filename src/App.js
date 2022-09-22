@@ -3,7 +3,7 @@ import "./App.css";
 import { Button, Stack } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
-import { Timer } from "./components/Timer/timer.js";
+import { Timer } from "./components/Timer/timer";
 
 function App() {
   return (
@@ -40,7 +40,6 @@ function App() {
             </Stack>
           </div>
         </Stack>
-        <Timer />
       </div>
     </div>
   );

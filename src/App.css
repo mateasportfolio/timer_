@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+  color: aliceblue;
+  background: linear-gradient(
+    rgb(177, 110, 166) 0%,
+    rgb(131, 59, 133) 40%,
+    rgb(191, 176, 227) 100%
+  );
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 84px repeat(2, 1fr);
+  grid-template-areas:
+    "header"
+    "display-form"
+    "timer";
+
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+@media (min-width: 480px) {
+  .app {
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 84px auto;
+    grid-template-areas:
+      "header header"
+      "display-form timer";
+  }
+}

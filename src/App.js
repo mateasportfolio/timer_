@@ -3,6 +3,7 @@ import "./App.css";
 import { Button, Stack } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
+import { Timer } from "./components/Timer/timer.js";
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
       <header className="App-header"></header>
       <Text fontSize="3xl" textAlign="center">
         Meditation-Timer
+      </Text>
+      <Text>
+        Create your own meditation timers Meditate following our simple guided
+        meditations and breathing exercises
       </Text>
       <div className="header">
         <Stack spacing={10} direction="column" align="left">
@@ -31,14 +36,11 @@ function App() {
               colorScheme="pink"
             ></Button>
             <Stack direction="column" spacing={4} align="center">
-              <Spinner size="xs" />
-              <Spinner size="sm" />
-              <Spinner size="md" />
-              <Spinner size="lg" />
               <Spinner size="xl" />
             </Stack>
           </div>
         </Stack>
+        <Timer />
       </div>
     </div>
   );

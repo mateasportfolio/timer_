@@ -3,12 +3,12 @@ import "./App.css";
 import { Button, Stack } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
-import { Timer } from "./components/Timer/timer";
+import { Timer } from "./components/Timer/Timer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <Timer />
       <Text fontSize="3xl" textAlign="center">
         Meditation-Timer
       </Text>

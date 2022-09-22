@@ -1,6 +1,13 @@
 .app {
   text-align: center;
   background-color: #282c34;
+  text-align: center;
+  color: aliceblue;
+  background: linear-gradient(
+    rgb(177, 110, 166) 0%,
+    rgb(131, 59, 133) 40%,
+    rgb(191, 176, 227) 100%
+  );
   min-height: 100vh;
   display: flex;
   flex-direction: column;

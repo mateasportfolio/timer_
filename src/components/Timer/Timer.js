@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 
-const Timer = () => {
+export const Timer = () => {
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
   function toggle() {
@@ -44,5 +44,3 @@ const Timer = () => {
     </div>
   );
 };
-
-export default Timer;

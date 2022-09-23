@@ -1,6 +1,6 @@
 .app {
   text-align: center;
-  background-color: #282c34;
+  background-color: #df23c3;
   text-align: center;
   color: aliceblue;
   background: linear-gradient(
@@ -14,11 +14,10 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .time {
-  font-size: 3rem;
+  font-size: 5rem;
   padding: 2rem;
 }
 
@@ -33,22 +32,22 @@
 }
 
 .button:focus {
-  outline-width: 0;
+  outline-width: 200px;
 }
 
 .button-primary:hover {
-  background-color: #2641d4;
-  border: 1px solid #1b1f2b;
+  background-color: #8834b5;
+  border: 1px solid #a386cd;
 }
 
 .button-primary-active {
-  background-color: #3151ff;
-  border: 1px solid #152684;
+  background-color: #a386cd;
+  border: 2px solid #b86c9a;
   color: white;
 }
 
 .button-primary-inactive {
-  background-color: #3151ff;
-  border: 1px solid #152684;
+  background-color: #491164;
+  border: 2px solid #7c4475;
   color: white;
 }

@@ -12,7 +12,7 @@ function App() {
       <Text fontSize="3xl" textAlign="center">
         Meditation-Timer
       </Text>
-      <Text>
+      <Text colorScheme="purple">
         Create your own meditation timers Meditate following our simple guided
         meditations and breathing exercises
       </Text>
@@ -25,8 +25,12 @@ function App() {
               variant="solid"
               spinnerPlacement="start"
               colorScheme="pink"
-            ></Button>
-          </div>
+            ></Button>{" "}
+          </div>{" "}
+        </Stack>
+      </div>
+
+      {/*}
           <div className="button-right">
             <Button
               isLoading
@@ -35,12 +39,10 @@ function App() {
               spinnerPlacement="start"
               colorScheme="pink"
             ></Button>
-            <Stack direction="column" spacing={4} align="center">
-              <Spinner size="xl" />
-            </Stack>
-          </div>
-        </Stack>
-      </div>
+  {*/}
+      <Stack direction="column" spacing={4} align="center">
+        <Spinner size="xl" />
+      </Stack>
     </div>
   );
 }

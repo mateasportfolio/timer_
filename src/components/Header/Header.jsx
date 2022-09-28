@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
-import "./style";
+import "./style.css";
 
 export const Header = () => {
   return (

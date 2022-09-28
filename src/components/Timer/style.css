@@ -1,24 +1,14 @@
-.app {
-  text-align: center;
-  background-color: #df23c3;
-  text-align: center;
-  color: aliceblue;
-  background: linear-gradient(
-    rgb(177, 110, 166) 0%,
-    rgb(131, 59, 133) 40%,
-    rgb(191, 176, 227) 100%
-  );
-  min-height: 100vh;
+.timer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
 .time {
-  font-size: 5rem;
-  padding: 2rem;
+  font-size: 48px;
+}
+
+.breath_label {
+  font-size: 36px;
 }
 
 .button {

@@ -8,12 +8,13 @@
   );
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 84px repeat(2, 1fr);
+  grid-template-rows: 84px repeat(2, min-content);
   grid-template-areas:
     "header"
     "display-form"
     "timer";
 
+  min-height: 100vh;
   height: 100%;
   width: 100%;
 }

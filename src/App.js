@@ -1,22 +1,22 @@
 import React from "react";
 import "./App.css";
-import { Button, Stack } from "@chakra-ui/react";
-import { Text } from "@chakra-ui/react";
-import { Spinner } from "@chakra-ui/react";
 import { Timer } from "./components/Timer/Timer";
+import { Header } from "./components/Header/Header";
+import { ImageGrid } from "./components/ImageGrid/ImageGrid";
 
 function App() {
   return (
     <div className="App">
+      <Header />
+      <ImageGrid />
       <Timer />
-      <Text fontSize="3xl" textAlign="center">
-        Meditation-Timer
-      </Text>
-      <Text colorScheme="purple">
-        Create your own meditation timers Meditate following our simple guided
-        meditations and breathing exercises
-      </Text>
-      <div className="header">
+    </div>
+  );
+}
+
+export default App;
+{
+  /* <div className="header">
         <Stack spacing={10} direction="column" align="left">
           <div className="button-left">
             <Button
@@ -28,9 +28,10 @@ function App() {
             ></Button>{" "}
           </div>{" "}
         </Stack>
-      </div>
-
-      {/*}
+      </div> */
+}
+{
+  /*}
           <div className="button-right">
             <Button
               isLoading
@@ -39,12 +40,8 @@ function App() {
               spinnerPlacement="start"
               colorScheme="pink"
             ></Button>
-  {*/}
-      <Stack direction="column" spacing={4} align="center">
+             <Stack direction="column" spacing={4} align="center">
         <Spinner size="xl" />
       </Stack>
-    </div>
-  );
+  {*/
 }
-
-export default App;

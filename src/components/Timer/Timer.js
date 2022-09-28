@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./style.css";
 
 export const Timer = () => {
@@ -17,17 +17,17 @@ export const Timer = () => {
     setSeconds(0);
     setIsActive(false);
   }
-  const countUp = () => {
+  const countUp = useCallback(() => {
     if (seconds >= 4) setCountDirection("down");
     setBreathLabel("Breath In...");
     setSeconds((seconds) => seconds + 1);
-  };
+  }, [seconds]);
 
-  const countDown = () => {
+  const countDown = useCallback(() => {
     if (seconds <= 1) setCountDirection("up");
     setBreathLabel("Breath Out...");
     setSeconds((seconds) => seconds - 1);
-  };
+  }, [seconds]);
 
   useEffect(() => {
     let interval = null;
@@ -44,7 +44,7 @@ export const Timer = () => {
     }
 
     return () => clearInterval(interval);
-  }, [isActive, seconds]);
+  }, [isActive, seconds, countDirection, countDown, countUp]);
 
   return (
     <div className="timer">

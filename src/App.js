@@ -3,6 +3,7 @@ import "./App.css";
 import { Timer } from "./components/Timer/Timer";
 import { Header } from "./components/Header/Header";
 import { ImageGrid } from "./components/ImageGrid/ImageGrid";
+import Description from "./components/Description/Description";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <ImageGrid />
       <Timer />
+      <Description />
     </div>
   );
 }

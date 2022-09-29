@@ -1,3 +1,8 @@
 .header {
   font-family: "Karla", sans-serif;
+  padding: 20px, 0px, 20px 0px;
+}
+
+.copy_text {
+  padding: 10px;
 }

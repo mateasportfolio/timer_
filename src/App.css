@@ -25,12 +25,4 @@ body {
 }
 
 @media (min-width: 480px) {
-  .app {
-    height: 100vh;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 84px auto;
-    grid-template-areas:
-      "header header"
-      "display-form timer";
-  }
 }

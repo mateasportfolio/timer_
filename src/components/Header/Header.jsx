@@ -8,10 +8,12 @@ export const Header = () => {
       <Text fontSize="3xl" textAlign="center">
         Meditation-Timer
       </Text>
-      <Text colorScheme="purple">
-        Create your own meditation timers Meditate following our simple guided
-        meditations and breathing exercises
-      </Text>
+      <div className="copy_text">
+        <Text colorScheme="purple">
+          Create your own meditation timers Meditate following our simple guided
+          meditations and breathing exercises
+        </Text>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
-import blumesee from "./blumesee.jpeg";
-import meditation_unsplashed from "./meditation_unsplashed.jpeg";
-import sky from "./sky.jpg";
-import stones from "./stones.jpeg";
+import auroraboralis from "./auroraboralis.jpeg";
+import tree from "./tree.jpeg";
+import aurora from "./aurora.jpeg";
+import pink from "./pink.jpeg";
+import sterne from "./sterne.jpeg";
 
-export { blumesee, meditation_unsplashed, sky, stones };
+export { tree, aurora, auroraboralis, pink, sterne };

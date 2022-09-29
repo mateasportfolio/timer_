@@ -6,13 +6,8 @@
     rgb(131, 59, 133) 40%,
     rgb(191, 176, 227) 100%
   );
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 84px repeat(2, min-content);
-  grid-template-areas:
-    "header"
-    "display-form"
-    "timer";
+  display: flex;
+  flex-direction: column;
 
   min-height: 100vh;
   height: 100%;

@@ -1,6 +1,5 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
-import "./style.css";
 
 export const Header = () => {
   return (
@@ -8,12 +7,10 @@ export const Header = () => {
       <Text fontSize="3xl" textAlign="center" p="2">
         Meditation-Timer
       </Text>
-      <div className="copy_text">
-        <Text p="10" colorScheme="purple">
-          Create your own meditation timers Meditate following our simple guided
-          meditations and breathing exercises
-        </Text>
-      </div>
+      <Text p="10" colorScheme="purple">
+        Create your own meditation timers Meditate following our simple guided
+        meditations and breathing exercises
+      </Text>
     </div>
   );
 };

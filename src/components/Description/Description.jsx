@@ -1,11 +1,11 @@
 import React from "react";
-import "./style.css";
+
 import { Text } from "@chakra-ui/react";
 
 export default function Footer() {
   return (
     <div className="footer">
-      <Text colorScheme="purple">
+      <Text mt={20} colorScheme="purple">
         “Enlightenment is not an experience. It is the state where you are left
         absolutely alone, nothing to know. No object, however beautiful, is
         present. Only in that moment does your consciousness, unobstructed by

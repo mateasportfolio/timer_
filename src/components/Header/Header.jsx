@@ -4,10 +4,10 @@ import { Text } from "@chakra-ui/react";
 export const Header = () => {
   return (
     <div className="header">
-      <Text fontSize="3xl" textAlign="center" p="2">
+      <Text fontSize="3xl" textAlign="center" p="2" color="purple.300">
         Meditation-Timer
       </Text>
-      <Text p="10" colorScheme="purple">
+      <Text p="10" color="whiteAlpha.900">
         Create your own meditation timers Meditate following our simple guided
         meditations and breathing exercises
       </Text>

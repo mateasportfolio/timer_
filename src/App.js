@@ -16,20 +16,20 @@ function App() {
   // };
 
   return (
-    <div className="App">
-      <Box
-        bgGradient={[
-          "linear(to-tr, pink.300, red.300)",
-          "linear(to-t, blue.200, teal.500)",
-          "linear(to-b, orange.100, purple.300)",
-        ]}
-      >
-        <Header />
-        <ImageGrid />
-        <Timer />
-        <Description />
-      </Box>
-    </div>
+    <Box
+      w="100%"
+      h="100%"
+      bgGradient={[
+        "linear(to-tr, pink.300, red.300)",
+        "linear(to-t, blue.200, teal.500)",
+        "linear(to-b, orange.100, purple.300)",
+      ]}
+    >
+      <Header />
+      <ImageGrid />
+      <Timer />
+      <Description />
+    </Box>
   );
 }
 

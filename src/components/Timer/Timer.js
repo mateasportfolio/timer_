@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import "./style.css";
+import { Button } from "@chakra-ui/react";
 
 export const Timer = () => {
   const [seconds, setSeconds] = useState(0);
@@ -51,15 +51,31 @@ export const Timer = () => {
       <div className="breath_label">{breathLabel}</div>
       <div className="time">{seconds}s</div>
       <div className="row">
-        <button
+        <Button
+          p="0.6rem"
+          m="0.4rem"
+          borderRadius="3"
+          textTransform="uppercase"
+          fontWeight="600"
+          fontSize="0.8rem"
+          borderStyle="groove"
           className={`button button-primary button-primary-${
             isActive ? "active" : "inactive"
           }`}
           onClick={toggle}
         >
           {isActive ? "Pause" : "Start"}
-        </button>
-        <button className="button" onClick={reset}>
+        </Button>
+        <button
+          p="0.6rem"
+          m="0.4rem"
+          borderRadius="3"
+          textTransform="uppercase"
+          fontWeight="600"
+          fontSize="0.8rem"
+          borderStyle="groove"
+          onClick={reset}
+        >
           Reset
         </button>
       </div>

@@ -4,11 +4,9 @@ import { Header } from "./components/Header/Header";
 import { ImageGrid } from "./components/ImageGrid/ImageGrid";
 import Description from "./components/Description/Description";
 import { Box } from "@chakra-ui/react";
+//import { useMediaQuery } from "@chakra-ui/react";
 
 function App() {
-  // const { colorMode, toggleColorMode } = useColorMode();
-  // const isDark = colorMode === "dark";
-
   // const breakpoints = {
   //   sm: "30em",
   //   md: "48em",

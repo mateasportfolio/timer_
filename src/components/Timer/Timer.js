@@ -47,38 +47,37 @@ export const Timer = () => {
   }, [isActive, seconds, countDirection, countDown, countUp]);
 
   return (
-    <div className="timer">
+    <div>
       <div className="breath_label">{breathLabel}</div>
       <div className="time">{seconds}s</div>
-      <div className="row">
-        <Button
-          p="0.6rem"
-          m="0.4rem"
-          borderRadius="3"
-          textTransform="uppercase"
-          fontWeight="600"
-          fontSize="0.8rem"
-          borderStyle="groove"
-          className={`button button-primary button-primary-${
-            isActive ? "active" : "inactive"
-          }`}
-          onClick={toggle}
-        >
-          {isActive ? "Pause" : "Start"}
-        </Button>
-        <button
-          p="0.6rem"
-          m="0.4rem"
-          borderRadius="3"
-          textTransform="uppercase"
-          fontWeight="600"
-          fontSize="0.8rem"
-          borderStyle="groove"
-          onClick={reset}
-        >
-          Reset
-        </button>
-      </div>
+
+      <Button
+        p={6}
+        m={2}
+        borderRadius="3"
+        textTransform="uppercase"
+        fontWeight="600"
+        fontSize="0.8rem"
+        borderStyle="groove"
+        className={`button button-primary button-primary-${
+          isActive ? "active" : "inactive"
+        }`}
+        onClick={toggle}
+      >
+        {isActive ? "Pause" : "Start"}
+      </Button>
+      <Button
+        p={6}
+        m={2}
+        borderRadius="3"
+        textTransform="uppercase"
+        fontWeight="600"
+        fontSize="0.8rem"
+        borderStyle="groove"
+        onClick={reset}
+      >
+        Reset
+      </Button>
     </div>
   );
 };

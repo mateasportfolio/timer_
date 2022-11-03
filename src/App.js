@@ -19,7 +19,7 @@ function App() {
     <Box
       w="100%"
       h="calc(100vh)"
-      p={5}
+      p={4}
       bgGradient={[
         "linear(to-tr, pink.300, red.300)",
         "linear(to-t, blue.200, teal.500)",

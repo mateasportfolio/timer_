@@ -62,7 +62,8 @@ export const Timer = () => {
         textTransform="uppercase"
         fontWeight="600"
         fontSize="0.8rem"
-        borderStyle="groove"
+        colorScheme="purple.400"
+        variant="outline"
         className={`button button-primary button-primary-${
           isActive ? "active" : "inactive"
         }`}
@@ -77,7 +78,8 @@ export const Timer = () => {
         textTransform="uppercase"
         fontWeight="600"
         fontSize="0.8rem"
-        borderStyle="groove"
+        colorScheme="purple.400"
+        variant="outline"
         onClick={reset}
       >
         Reset

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 
 export const Timer = () => {
   const [seconds, setSeconds] = useState(0);
@@ -48,8 +48,12 @@ export const Timer = () => {
 
   return (
     <div>
-      <div className="breath_label">{breathLabel}</div>
-      <div className="time">{seconds}s</div>
+      <Box fontSize="lg" color="purple.600">
+        {breathLabel}
+      </Box>
+      <Box fontSize="lg" color="purple.600">
+        {seconds}
+      </Box>
 
       <Button
         p={6}

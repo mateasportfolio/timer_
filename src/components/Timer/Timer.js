@@ -48,22 +48,22 @@ export const Timer = () => {
 
   return (
     <div>
-      <Box fontSize="l" color="purple.600">
+      <Box fontSize="xl" color="purple.600">
         {breathLabel}
       </Box>
-      <Box fontSize="l" color="purple.600">
+      <Box fontSize="xl" color="purple.600">
         {seconds}
       </Box>
 
       <Button
-        p={6}
-        m={2}
+        pb={6}
+        mb={2}
         borderRadius="3"
         textTransform="uppercase"
-        fontWeight="300"
         fontSize="0.8rem"
         colorScheme="purple.800"
         variant="solid"
+        fontWeight="bold"
         className={`button button-primary button-primary-${
           isActive ? "active" : "inactive"
         }`}
@@ -72,11 +72,11 @@ export const Timer = () => {
         {isActive ? "Pause" : "Start"}
       </Button>
       <Button
-        p={6}
-        m={2}
+        pb={6}
+        mb={2}
         borderRadius="3"
         textTransform="uppercase"
-        fontWeight="300"
+        fontWeight="bold"
         fontSize="0.8rem"
         colorScheme="purple.800"
         variant="solid"

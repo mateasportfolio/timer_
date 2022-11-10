@@ -84,31 +84,33 @@ export const Timer = () => {
       >
         {isActive ? "Pause" : "Start"}
       </Button>
-      <Box
-        as="button"
-        onClick={reset}
-        lineHeight="1.5"
-        transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-        border="0.5px"
-        px="10px"
-        borderRadius="1px"
-        fontSize="xl"
-        fontWeight="light"
-        bg="pink"
-        borderColor="red"
-        color="blue"
-        _hover={{ bg: "##F9A3CB" }}
-        _active={{
-          bg: " #EF87BE",
-          transform: "scale(0.98)",
-          borderColor: "#00000",
-        }}
-        _focus={{
-          boxShadow:
-            "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-        }}
-      >
-        Reset
+      <Box>
+        <Button
+          as="button"
+          onClick={reset}
+          lineHeight="1.5"
+          transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
+          border="0.5px"
+          px="10px"
+          borderRadius="1px"
+          fontSize="xl"
+          fontWeight="light"
+          bg="pink"
+          borderColor="red"
+          color="blue"
+          _hover={{ bg: "##F9A3CB" }}
+          _active={{
+            bg: " #EF87BE",
+            transform: "scale(0.98)",
+            borderColor: "#00000",
+          }}
+          _focus={{
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          }}
+        >
+          Reset
+        </Button>
       </Box>
     </div>
   );

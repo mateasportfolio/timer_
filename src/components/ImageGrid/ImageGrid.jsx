@@ -1,4 +1,4 @@
-import { Grid, GridItem, Image } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import React from "react";
 import { auroraboralis, pink, sterne, tree } from "../../assets";
 
@@ -22,6 +22,7 @@ export const ImageGrid = () => {
       <GridItem rowSpan={1} colSpan={4} h="100%" w="100%" overflow="hidden">
         <Image src={pink} objectFit="cover" h="100%" w="100%" />
       </GridItem>
+      <Flex border="3px solid red"></Flex>
     </Grid>
   );
 };

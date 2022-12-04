@@ -11,6 +11,7 @@ export const Header = () => {
         Create your own meditation timers Meditate following our simple guided
         meditations and breathing exercises
       </Text>
+      
     </div>
   );
 };

@@ -1,9 +1,6 @@
 import React from "react";
-import { Flex, Image, Stack } from "@chakra-ui/react";
-// import { motion } from "framer-motion";
-// import Lottie from "lottie-react";
-// // import circle from "../../assets/circle.json";
-// import atme from "../../assets/atme.json";
+import { Flex, Image } from "@chakra-ui/react";
+
 import lotus from "../../assets/lotus.jpeg";
 
 export const ImageGrid = () => {

@@ -1,4 +1,3 @@
-// import "./styles.css";
 import React from "react";
 import { Timer } from "./components/Timer/Timer";
 import { Header } from "./components/Header/Header";
@@ -6,8 +5,6 @@ import { ImageGrid } from "./components/ImageGrid/ImageGrid";
 import { Box, Flex } from "@chakra-ui/react";
 import Lottie from "lottie-react";
 import breathe from "./assets/breathe.json";
-import circle from "./assets/circle.json";
-// import { motion } from "framer-motion";
 
 function App() {
   return (
@@ -31,6 +28,7 @@ function App() {
 
       <Box
         w="100%"
+        // eslint-disable-next-line
         h="calc(100vh)"
         p={4}
         bg="blue.100"
@@ -41,9 +39,8 @@ function App() {
         ]}
       >
         <Header />
-        <Flex m="auto" alignSelf="center" flexDirection="row">
+        <Flex>
           <Timer />
-          <Lottie animationData={circle} value="overlay" />
           <ImageGrid />
         </Flex>
       </Box>

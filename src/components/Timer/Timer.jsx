@@ -68,7 +68,6 @@ export const Timer = () => {
           fontSize="3xl"
           color="white.300"
           m="2px"
-          flexFlow="column"
         >
           {seconds}
         </Button>

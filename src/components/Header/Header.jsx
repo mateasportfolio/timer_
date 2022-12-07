@@ -6,10 +6,13 @@ import { Heading, Flex } from "@chakra-ui/react";
 export const Header = () => {
   return (
     <Flex
+      border="1px solid white"
+      p="20px"
+      pt="30px"
+      mt="20px"
+      mb="0px"
       flexDirection="column"
       textAlign={{ base: "center", md: "left" }}
-      p={20}
-      minWidth="50%"
     >
       <Heading
         as="h1"
@@ -22,6 +25,7 @@ export const Header = () => {
       >
         Meditation Timer
       </Heading>
+
       <Heading as="h1" fontSize="2xl" fontWeight="300" color="purple.300">
         Create your own meditation timers Meditate following our simple guided
         meditations and breathing exercises
@@ -35,7 +39,5 @@ export const Header = () => {
         <strong>Osho, Meditation: The First and Last Freedom</strong>
       </Heading>
     </Flex>
-
-    // <Lottie animationData={circle} value="overlay" />
   );
 };

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Box, Button, Flex, HStack } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
+//import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 // import { Image, Flex } from "@chakra-ui/react";
 // import lotus from "./../../assets/lotus.jpeg";
 
@@ -12,7 +14,7 @@ export const Timer = () => {
   function toggle() {
     setIsActive(!isActive);
   }
-
+  // eslint-disable-next-line
   function reset() {
     setBreathLabel("");
     setCountDirection("up");
@@ -43,22 +45,24 @@ export const Timer = () => {
     }
 
     return () => clearInterval(interval);
-  }, [isActive, seconds, countDirection, countDown, countUp]);
+  }, [isActive, seconds, countDirection, reset, countDown, countUp]);
 
   return (
     <>
       <Flex flexDirection="row" alignItems="center">
-        <HStack
-          padding="29px"
-          minHeight="100vh"
+        <Flex
+          border="1px solid white"
+          minHeight="100%"
           fontSize="2xl"
           color="purple.600"
           justifyContent="center"
           display="flex"
         >
+          {" "}
           {breathLabel}
-        </HStack>
-        <Box
+        </Flex>
+
+        <Flex
           p="2rem"
           display="flex"
           m="4rem"
@@ -72,8 +76,8 @@ export const Timer = () => {
           borderStyle="groove"
         >
           {seconds}
-        </Box>
-        <HStack
+        </Flex>
+        <Flex
           padding="6rem 1.5rem"
           direction="row"
           p="6px"
@@ -100,8 +104,8 @@ export const Timer = () => {
             {" "}
             {isActive ? "Pause" : "Start"}
           </Button>
-        </HStack>
-        <HStack
+        </Flex>
+        <Flex
           padding="6rem 1.5rem"
           direction="row"
           p="6px"
@@ -121,9 +125,10 @@ export const Timer = () => {
             fontSize="2rem"
             borderStyle="groove"
           >
-            Reset {reset}
+            {reset}
+            Reset
           </Button>
-        </HStack>
+        </Flex>
       </Flex>
     </>
   );

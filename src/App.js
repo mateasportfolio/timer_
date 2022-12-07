@@ -1,3 +1,4 @@
+// import "./styles.css";
 import React from "react";
 import { Timer } from "./components/Timer/Timer";
 import { Header } from "./components/Header/Header";
@@ -6,13 +7,12 @@ import { Box, Flex } from "@chakra-ui/react";
 import Lottie from "lottie-react";
 import breathe from "./assets/breathe.json";
 import circle from "./assets/circle.json";
+// import { motion } from "framer-motion";
 
 function App() {
   return (
     <>
       <Flex
-        w="100%"
-        h="calc(100vh)"
         bg="purple.100"
         flexDirection="row"
         flex="1"
@@ -26,7 +26,7 @@ function App() {
           "linear(to-b, orange.100, purple.300)",
         ]}
       >
-        <Lottie animationData={breathe} />
+        <Lottie animationData={breathe} onDurationChange="2s" />
       </Flex>
 
       <Box
@@ -41,14 +41,7 @@ function App() {
         ]}
       >
         <Header />
-
-        <Flex
-          w="100%"
-          h="calc(100vh)"
-          m="auto"
-          alignSelf="center"
-          flexDirection="row"
-        >
+        <Flex m="auto" alignSelf="center" flexDirection="row">
           <Timer />
           <Lottie animationData={circle} value="overlay" />
           <ImageGrid />

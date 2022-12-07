@@ -26,7 +26,7 @@ function App() {
           "linear(to-b, orange.100, purple.300)",
         ]}
       >
-        <Lottie animationData={breathe} onDurationChange="2s" />
+        <Lottie animationData={breathe} duration="2" />
       </Flex>
 
       <Box

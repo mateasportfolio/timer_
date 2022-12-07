@@ -49,14 +49,16 @@ export const Timer = () => {
 
   return (
     <>
-      <Flex flexDirection="row" alignItems="center">
+      <Flex
+        flexDirection={{ base: "column", md: "row" }}
+        flex="1"
+        justifyContent="center"
+      >
         <Flex
           border="1px solid white"
           minHeight="100%"
           fontSize="2xl"
           color="purple.600"
-          justifyContent="center"
-          display="flex"
         >
           {" "}
           {breathLabel}
@@ -88,9 +90,9 @@ export const Timer = () => {
         >
           <Button
             display="flex"
-            padding="6rem 1.5rem"
-            m="4rem"
-            p="6px"
+            // padding="6rem 1.5rem"
+            // m="4rem"
+            // p="6px"
             borderRadius="3px"
             textTransform="uppercase"
             fontWeight={100}
@@ -106,10 +108,10 @@ export const Timer = () => {
           </Button>
         </Flex>
         <Flex
-          padding="6rem 1.5rem"
-          direction="row"
-          p="6px"
-          mb="4px"
+          // padding="6rem 1.5rem"
+          // direction="row"
+          // p="6px"
+          // mb="4px"
           alignItems="center"
           justifyContent="center"
           display="flex"

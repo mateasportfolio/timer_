@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  background-color: #39cccc;
+  color: #001f3f;
+  min-height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  flex-direction: column;
+}
+
+.buttons {
+  margin-top: 0.5em;
+}
+
+button {
+  text-transform: uppercase;
+  margin: 1em;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #37474f;
+  border-color: #37474f;
+}
+
+button:focus {
+  border: none;
+}
+
+button:hover {
+  color: white;
+  background-color: #001f3f;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: #37474f;
+  color: white;
+}

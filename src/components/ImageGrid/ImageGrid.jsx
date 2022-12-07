@@ -1,31 +1,43 @@
-// import { Grid, GridItem, Image } from "@chakra-ui/react";
 import React from "react";
-import { Box } from "@chakra-ui/react";
-// import { auroraboralis, pink, sterne, tree } from "../../assets";
+import { Flex } from "@chakra-ui/react";
+// import Lottie from "lottie-react";
+// // import circle from "../../assets/circle.json";
+// import atme from "../../assets/atme.json";
 
 export const ImageGrid = () => {
   return (
-    <Box></Box>
-    // <Grid
-    //   h="200px"
-    //   templateRows="repeat(2, 1fr)"
-    //   templateColumns="repeat(5, 1fr)"
-    //   gap={4}
-    // >
-    // {
-    //   /* <GridItem rowSpan={2} colSpan={1} h="100%" w="100%" overflow="hidden">
-    //     <Image src={tree} objectFit="cover" h="100%" w="100%" />
-    //   </GridItem>
-    //   <GridItem rowSpan={1} colSpan={2} h="100%" w="100%" overflow="hidden">
-    //     <Image src={sterne} objectFit="cover" h="100%" w="100%" />
-    //   </GridItem>
-    //   <GridItem rowSpan={1} colSpan={2} h="100%" w="100%" overflow="hidden">
-    //     <Image src={auroraboralis} objectFit="cover" h="100%" w="100%" />
-    //   </GridItem>
-    //   <GridItem rowSpan={1} colSpan={4} h="100%" w="100%" overflow="hidden">
-    //     <Image src={pink} objectFit="cover" h="100%" w="100%" />
-    //   </GridItem>
-    // </Grid> */
-    // }
+    <>
+      <Flex
+        minHeight="100vh"
+        width="90%"
+        m="auto"
+        alignSelf="center"
+        mb="2px"
+        position="relative"
+      >
+        {/* <Lottie
+          animationData={atme}
+          flexDirection="column"
+          justifyContent="center"
+        /> */}
+        {/* <Box
+          width="90%"
+          m="auto"
+          alignSelf="center"
+          mb="20px"
+          flexDirection={{ base: "column", sm: "row-reverse" }}
+        /> */}
+
+        <Flex
+          width="50%"
+          m="auto"
+          alignSelf="center"
+          mb="20px"
+          justifyContent="flex-start"
+        >
+          {" "}
+        </Flex>
+      </Flex>
+    </>
   );
 };

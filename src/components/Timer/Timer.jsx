@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Box, Button, HStack } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack } from "@chakra-ui/react";
+// import { Image, Flex } from "@chakra-ui/react";
+// import lotus from "./../../assets/lotus.jpeg";
 
 export const Timer = () => {
   const [seconds, setSeconds] = useState(0);
@@ -11,7 +13,6 @@ export const Timer = () => {
     setIsActive(!isActive);
   }
 
-  // eslint-disable-next-line
   function reset() {
     setBreathLabel("");
     setCountDirection("up");
@@ -27,21 +28,18 @@ export const Timer = () => {
   const countDown = useCallback(() => {
     if (seconds <= 1) setCountDirection("up");
     setBreathLabel("Breath Out...");
+
     setSeconds((seconds) => seconds - 1);
   }, [seconds]);
 
   useEffect(() => {
     let interval = null;
-    if (isActive && countDirection === "up") {
+    if (isActive) {
       interval = setInterval(() => {
-        countUp();
+        setSeconds((seconds) => seconds + 1);
       }, 1000);
-    }
-
-    if (isActive && countDirection === "down") {
-      interval = setInterval(() => {
-        countDown();
-      }, 1000);
+    } else if (!isActive && seconds !== 0) {
+      clearInterval(interval);
     }
 
     return () => clearInterval(interval);
@@ -49,31 +47,35 @@ export const Timer = () => {
 
   return (
     <>
-      <>
-        <Box
+      <Flex flexDirection="row" alignItems="center">
+        <HStack
+          padding="29px"
+          minHeight="100vh"
           fontSize="2xl"
           color="purple.600"
-          p="8px"
           justifyContent="center"
           display="flex"
         >
           {breathLabel}
-        </Box>
-        <Button
-          boxShadow="dark-lg"
-          p="3"
-          rounded="md"
-          bg="pink.100"
-          size="sm"
-          fontSize="3xl"
-          color="white.300"
-          m="2px"
+        </HStack>
+        <Box
+          p="2rem"
+          display="flex"
+          m="4rem"
+          borderRadius="3px"
+          textTransform="uppercase"
+          fontWeight={100}
+          fontSize="4rem"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          borderStyle="groove"
         >
           {seconds}
-        </Button>
+        </Box>
         <HStack
+          padding="6rem 1.5rem"
           direction="row"
-          spacing={2}
           p="6px"
           mb="4px"
           alignItems="center"
@@ -81,13 +83,15 @@ export const Timer = () => {
           display="flex"
         >
           <Button
-            boxShadow="xs"
-            p="6"
-            rounded="lg"
-            bg="pink.100"
-            size="lg"
-            justifyContent="flex-start"
-            variant="ghost"
+            display="flex"
+            padding="6rem 1.5rem"
+            m="4rem"
+            p="6px"
+            borderRadius="3px"
+            textTransform="uppercase"
+            fontWeight={100}
+            fontSize="2rem"
+            borderStyle="groove"
             className={`button button-primary button-primary-${
               isActive ? "active" : "inactive"
             }`}
@@ -96,22 +100,31 @@ export const Timer = () => {
             {" "}
             {isActive ? "Pause" : "Start"}
           </Button>
-          <Box />
-
+        </HStack>
+        <HStack
+          padding="6rem 1.5rem"
+          direction="row"
+          p="6px"
+          mb="4px"
+          alignItems="center"
+          justifyContent="center"
+          display="flex"
+        >
           <Button
-            boxShadow="xs"
-            p="6"
-            rounded="md"
-            bg="pink.100"
-            size="lg"
-            colorScheme="white"
-            variant="ghost"
-            justifyContent="flex-start"
+            display="flex"
+            padding="6rem 1.5rem"
+            m="4rem"
+            p="6px"
+            borderRadius="3px"
+            textTransform="uppercase"
+            fontWeight={100}
+            fontSize="2rem"
+            borderStyle="groove"
           >
-            Reset
+            Reset {reset}
           </Button>
         </HStack>
-      </>
+      </Flex>
     </>
   );
 };

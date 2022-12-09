@@ -1,9 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Button, Flex } from "@chakra-ui/react";
-//import { motion } from "framer-motion";
-//import { motion } from "framer-motion";
-// import { Image, Flex } from "@chakra-ui/react";
-// import lotus from "./../../assets/lotus.jpeg";
+import { Button, Flex, Stack, Box, VStack } from "@chakra-ui/react";
 
 export const Timer = () => {
   const [seconds, setSeconds] = useState(0);
@@ -19,7 +15,7 @@ export const Timer = () => {
     setBreathLabel("");
     setCountDirection("up");
     setSeconds(0);
-    setIsActive(false);
+    setIsActive(true);
   }
   const countUp = useCallback(() => {
     if (seconds >= 4) setCountDirection("down");
@@ -45,92 +41,87 @@ export const Timer = () => {
     }
 
     return () => clearInterval(interval);
-  }, [isActive, seconds, countDirection, reset, countDown, countUp]);
+  }, [isActive, seconds, countDirection, countDown, countUp]);
 
   return (
     <>
-      <Flex
-        flexDirection={{ base: "column", md: "row" }}
-        flex="1"
-        justifyContent="center"
-      >
+      <>
         <Flex
-          border="1px solid white"
-          minHeight="100%"
-          fontSize="2xl"
-          color="purple.600"
+          flexDirection={{ base: "column", md: "row" }}
+          justifyContent="center"
         >
-          {" "}
-          {breathLabel}
+          <Stack
+            flexDirection="column"
+            display="flow-root"
+            width={150}
+            fontSize="2xl"
+            color="purple.600"
+            padding={2}
+            margin={4}
+          >
+            {" "}
+            <VStack
+              flexDirection="column"
+              display="flex"
+              width={150}
+              fontSize="2xl"
+              color="purple.600"
+              padding={2}
+              margin={4}
+            >
+              {breathLabel}
+            </VStack>
+            <Box
+              flexDirection="row"
+              position="relative"
+              padding={0}
+              display="flex"
+              margin={4}
+              borderRadius="3px"
+              textTransform="uppercase"
+              fontWeight={100}
+              fontSize="4rem"
+              alignItems="center"
+              justifyContent="start"
+            >
+              {seconds}
+            </Box>{" "}
+          </Stack>
         </Flex>
 
-        <Flex
-          p="2rem"
-          display="flex"
-          m="4rem"
+        <Button
+          margin={4}
+          padding={6}
           borderRadius="3px"
           textTransform="uppercase"
           fontWeight={100}
-          fontSize="4rem"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
+          fontSize="2rem"
           borderStyle="groove"
+          className={`button button-primary button-primary-${
+            isActive ? "active" : "inactive"
+          }`}
+          onClick={toggle}
         >
-          {seconds}
-        </Flex>
-        <Flex
-          padding="6rem 1.5rem"
-          direction="row"
-          p="6px"
-          mb="4px"
-          alignItems="center"
-          justifyContent="center"
-          display="flex"
+          {" "}
+          {isActive ? "Pause" : "Start"}
+        </Button>
+      </>
+      <Flex alignItems="space-between" justifyContent="flex-start">
+        <Button
+          margin={4}
+          padding={6}
+          borderRadius="3px"
+          textTransform="uppercase"
+          fontWeight={100}
+          fontSize="2rem"
+          borderStyle="groove"
+          className={`button button-primary button-primary-${
+            isActive ? "active" : "inactive"
+          }`}
+          onClick={reset}
         >
-          <Button
-            display="flex"
-            // padding="6rem 1.5rem"
-            // m="4rem"
-            // p="6px"
-            borderRadius="3px"
-            textTransform="uppercase"
-            fontWeight={100}
-            fontSize="2rem"
-            borderStyle="groove"
-            className={`button button-primary button-primary-${
-              isActive ? "active" : "inactive"
-            }`}
-            onClick={toggle}
-          >
-            {" "}
-            {isActive ? "Pause" : "Start"}
-          </Button>
-        </Flex>
-        <Flex
-          // padding="6rem 1.5rem"
-          // direction="row"
-          // p="6px"
-          // mb="4px"
-          alignItems="center"
-          justifyContent="center"
-          display="flex"
-        >
-          <Button
-            display="flex"
-            padding="6rem 1.5rem"
-            m="4rem"
-            p="6px"
-            borderRadius="3px"
-            textTransform="uppercase"
-            fontWeight={100}
-            fontSize="2rem"
-            borderStyle="groove"
-          >
-            {reset}
-            Reset
-          </Button>
-        </Flex>
+          Reset
+        </Button>
       </Flex>
     </>
   );

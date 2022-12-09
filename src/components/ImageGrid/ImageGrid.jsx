@@ -1,27 +1,19 @@
 import React from "react";
-import { Flex, Image } from "@chakra-ui/react";
-
-import lotus from "../../assets/lotus.jpeg";
+import { Flex } from "@chakra-ui/react";
 
 export const ImageGrid = () => {
   return (
     <>
       <Flex
-        border="1px solid white"
-        minHeight="100%"
-        width="90%"
-        m="auto"
+        border="2px solid white"
+        maxHeight="100%"
+        width="100%"
+        margin={2}
         alignSelf="center"
-        mb="2px"
-      />
-
-      <Image
-        src={lotus}
-        alt="blume"
-        boxSize="250px"
-        objectFit="cover"
-        border="1px solid white"
-      />
+        mb={2}
+        flexDirection="column"
+        justifyContent="start"
+      ></Flex>
     </>
   );
 };

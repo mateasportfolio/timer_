@@ -12,7 +12,6 @@ function App() {
       <Flex
         bg="purple.100"
         flexDirection="row"
-        flex="1"
         alignItems="center"
         height={400}
         border="2px solid white"
@@ -30,7 +29,7 @@ function App() {
         w="100%"
         // eslint-disable-next-line
         h="calc(100vh)"
-        p={4}
+        padding={4}
         bg="blue.100"
         bgGradient={[
           "linear(to-tr, pink.300, red.300)",
@@ -39,10 +38,8 @@ function App() {
         ]}
       >
         <Header />
-        <Flex>
-          <Timer />
-          <ImageGrid />
-        </Flex>
+        <Timer />
+        <ImageGrid />
       </Box>
     </>
   );

@@ -6,7 +6,7 @@ import { Heading, Flex } from "@chakra-ui/react";
 export const Header = () => {
   return (
     <Flex
-      border="1px solid white"
+      border="2px solid pink"
       p="20px"
       pt="30px"
       mt="20px"

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Button, Flex, Stack, Box, VStack } from "@chakra-ui/react";
+import { Button, Flex, Stack, Box, VStack, Text } from "@chakra-ui/react";
 
 export const Timer = () => {
   const [seconds, setSeconds] = useState(0);
@@ -39,6 +39,13 @@ export const Timer = () => {
     } else if (!isActive && seconds !== 0) {
       clearInterval(interval);
     }
+    // SYNTAX
+    // useEffect(() => {
+    //   const timer = setTimeout(() => {
+    //     console.log('This will run after 1 second!')
+    //   }, 1000);
+    //   return () => clearTimeout(timer);
+    // }, []);
 
     return () => clearInterval(interval);
   }, [isActive, seconds, countDirection, countDown, countUp]);
@@ -46,6 +53,7 @@ export const Timer = () => {
   return (
     <>
       <>
+        <Text border="1px solid red">In Progress</Text>
         <Flex
           flexDirection={{ base: "column", md: "row" }}
           justifyContent="center"
